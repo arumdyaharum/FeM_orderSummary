@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+:root {
+    --base: hsl(225, 100%, 98%);
+    --background: hsl(225, 100%, 94%);
+    --link: hsl(245, 75%, 52%);
+    --active: hsl(245, 75%, 65%);
+    --description: hsl(224, 23%, 55%);
+    --title: hsl(223, 47%, 23%);
+}
+
+body {
+    height:100vh;
+    width:100vw;
+    position:relative;
+    box-sizing:border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background:var(--background);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-image: url("./images/pattern-background-desktop.svg"); 
+    }
+}
+
+main {
+    width: 85%;
+    max-width: 450px;
+    background: var(--base);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+main img.img-hero {
+    width: 100%;
+}
+
+main h2 {
+    text-align: center;
+    margin: 30px 0 15px;
+    font-weight: 900;
+}
+
+main .order-desc {
+    text-align: center;
+    margin: 0 5vw;
+    color:var(--description);
+}
+
+main .annual-plan {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 3vw;
+}
+
+main .annual-plan .icon-music {
+    margin: 0 20px;
+    width: 60px;
+    height: 60px;
+}
+
+main .annual-plan .desc {
+    flex-grow: 3;
+    flex-shrink: 2;
+    margin: 5px 0;
+}
+
+main .annual-plan .link {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 20px 0;
+    color: var(--link);
+    font-weight: 900;
+}
+
+main .annual-plan .link:active {
+    color: var(--active);
+}
+
+main .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+main .btn-dark {
+    width: 85%;
+    text-align: center;
+    font-weight: 700;
+    background: var(--link);
+    color: white;
+    text-decoration: none;
+    padding: 20px 0;
+    border-radius: 15px;
+    margin: 0 20px 10px; 
+    box-shadow: 0px 25px 25px #ddd;
+}
+
+main .btn-dark:active {
+    background: var(--active);
+}
+
+main .btn-light {
+    width: 85%;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px 0;
+    color: var(--description);
+}
+
+main .btn-light:active {
+    color: var(--title);
+}
+
+/* ================================== */
+
+.attribution {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 11px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+  
